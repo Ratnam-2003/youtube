@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import moment from 'moment/moment'
 import BodyShimmer from './shimmer/Bodyshimmer'
 
 
@@ -8,8 +9,22 @@ const Video= (props) => {
      <img className='tube-img' src={props.data.snippet.thumbnails.high.url} />
    <h3 className='timb'> {props.data.snippet.title}</h3>
    <p className='timb'>{props.data.snippet.channelTitle}</p>
-   <p className='timb'>{props.data.statistics.viewCount}views</p>
+   <p className='timb'>{valueconvert(props.data.statistics.viewCount)} views &bull; {moment(props.data.snippet.publishedAt).fromNow()}</p>
   </div>
+}
+const valueconvert= (value)=>{
+  if(value>=1000000)
+  {
+    return Math.floor(value/1000000)+"M";
+  }
+  else if(value>=1000){
+        return Math.floor(value/1000)+"K";
+
+  }
+  else{
+    return value;
+  }
+
 }
 function Videocontainer() {
   const [videoarray,setVideoarray]=useState([])
