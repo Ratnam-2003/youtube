@@ -216,14 +216,14 @@ body {
 
 }
 .nextv{
+    width: 70%;
     padding-top: 110px;
     padding-left: 120px;
     border-radius: 20px;
-    width: 300px;
 }
 .v-dec{
     border-radius: 10px;
-    width: 860px;
+    width: 870px;
     height: 480px;
 }
 .gray-box {
@@ -237,4 +237,43 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.recomended{
+    padding-top: 110px;
+    padding-right: 120px;
+    border-radius: 20px;
+    width: 30%;
+}
+.side-video-list{
+    display: flex;
+    margin-bottom:10px;
+}
+.image{
+    border-radius: 15px;
+    flex-basis: 49%;
+    width: 60%;
+    height: 160px;
+}
+.bodyy{width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.vid-info{
+    flex-basis: 49%;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.vid-info>h4{
+    width: 270px;
+    margin-bottom: 0px;
+}
+.vid-info>p{
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+.dots{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
